@@ -15,9 +15,10 @@ func InitRouter () *gin.Engine {
 
 	//路由分组 并使用自定义中间件
 	member := r.Group("/api/member", middlewares.UseTime())
+	memberController := new(controllers.MemberController)
 	{
-		member.GET("/list", test.List)
-		member.POST("/add", test.Add)
+		member.GET("/list", memberController.List)
+		member.POST("/add", memberController.Add)
 	}
 
 
