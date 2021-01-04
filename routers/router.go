@@ -4,6 +4,7 @@ import (
 	"gin-test/controllers"
 	"gin-test/middlewares"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 //路由
@@ -18,9 +19,22 @@ func InitRouter () *gin.Engine {
 	memberController := new(controllers.MemberController)
 	{
 		member.GET("/list", memberController.List)
-		member.POST("/add", memberController.Add)
+		member.GET("/add", memberController.Add)
 	}
 
+	r.NoRoute(func(c *gin.Context) {
+		c.JSON(http.StatusNotFound, gin.H{
+			"code" : http.StatusNotFound,
+			"msg" : "no route",
+		})
+	})
+
+	r.NoMethod(func(c *gin.Context) {
+		c.JSON(http.StatusNotFound, gin.H{
+			"code" : http.StatusNotFound,
+			"msg" : "no method",
+		})
+	})
 
 	return r
 }

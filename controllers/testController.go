@@ -2,17 +2,14 @@ package controllers
 
 import (
 	"github.com/gin-gonic/gin"
-	"net/http"
 )
 
 type TestController struct {
-
+	BaseController
 }
 
 func (t *TestController) Ping (c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{
-		"message" : "pong",
-	})
+	t.RenderJson(c,"pong")
 }
 
 
