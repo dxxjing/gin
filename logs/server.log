@@ -1,0 +1,54 @@
+{"level":"info","time":"2021-01-08T13:56:28.043+0800","linenum":"F:/go-workspace/gin-test/main.go:18","msg":"test","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T13:57:07.601+0800","linenum":"F:/go-workspace/gin-test/main.go:18","msg":"test","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T13:59:40.969+0800","linenum":"F:/go-workspace/gin-test/main.go:40","msg":"Shutdown Server ...","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T13:59:40.981+0800","linenum":"F:/go-workspace/gin-test/main.go:47","msg":"Server exiting","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:00:22.590+0800","linenum":"F:/go-workspace/gin-test/main.go:19","msg":"test zap","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:01:53.273+0800","linenum":"F:/go-workspace/gin-test/main.go:40","msg":"Shutdown Server ...","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:01:53.273+0800","linenum":"F:/go-workspace/gin-test/main.go:47","msg":"Server exiting","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:01:57.259+0800","linenum":"F:/go-workspace/gin-test/main.go:19","msg":"test zap","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:02:37.699+0800","linenum":"F:/go-workspace/gin-test/middlewares/GinLogger.go:18","msg":"/api/member/list","serviceName":"hippo-server","status":200,"method":"GET","path":"/api/member/list","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","errors":"","cost":0.0079782}
+{"level":"info","time":"2021-01-08T14:05:36.950+0800","linenum":"F:/go-workspace/gin-test/main.go:40","msg":"Shutdown Server ...","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:05:36.951+0800","linenum":"F:/go-workspace/gin-test/main.go:47","msg":"Server exiting","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:06:27.854+0800","linenum":"F:/go-workspace/gin-test/main.go:20","msg":"test zap","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:06:40.795+0800","linenum":"F:/go-workspace/gin-test/middlewares/GinLogger.go:20","msg":"/api/member/list","serviceName":"hippo-server","status":200,"method":"GET","path":"/api/member/list","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","errors":"","cost":0}
+{"level":"info","time":"2021-01-08T14:08:23.934+0800","linenum":"F:/go-workspace/gin-test/main.go:42","msg":"Shutdown Server ...","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:08:23.934+0800","linenum":"F:/go-workspace/gin-test/main.go:49","msg":"Server exiting","serviceName":"hippo-server"}
+{"level":"info","time":"2021-01-08T14:08:32.581+0800","linenum":"F:/go-workspace/gin-test/main.go:20","msg":"test zap"}
+{"level":"info","time":"2021-01-08T14:08:39.335+0800","linenum":"F:/go-workspace/gin-test/middlewares/GinLogger.go:20","msg":"/api/member/list","status":200,"method":"GET","path":"/api/member/list","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","errors":"","cost":0.0009967}
+{"level":"info","time":"2021-01-08T14:36:50.435+0800","linenum":"F:/go-workspace/gin-test/main.go:42","msg":"Shutdown Server ..."}
+{"level":"info","time":"2021-01-08T14:36:50.436+0800","linenum":"F:/go-workspace/gin-test/main.go:49","msg":"Server exiting"}
+2021-01-08T14:36:55.105+0800|info|F:/go-workspace/gin-test/main.go:22|test zap
+2021-01-08T14:37:05.998+0800|info|F:/go-workspace/gin-test/middlewares/GinLogger.go:22|/api/member/list|{"status": 200, "method": "GET", "path": "/api/member/list", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36", "errors": "", "cost": 0.0009968}
+2021-01-08T14:51:03.253+0800|info|F:/go-workspace/gin-test/main.go:44|Shutdown Server ...
+2021-01-08T14:51:03.254+0800|info|F:/go-workspace/gin-test/main.go:51|Server exiting
+2021-01-08T14:51:07.236+0800|info|F:/go-workspace/gin-test/main.go:22|test zap
+2021-01-08T14:51:29.950+0800|info|/api/member/list|{"uid": 3688, "status": 200, "method": "GET", "path": "/api/member/list", "query": "", "ip": "::1", "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36", "errors": "", "cost": 0.0009973}
+
+2021-01-08T15:50:22.924+0800|info|Shutdown Server ...|{"uid": 3688}
+2021-01-08T15:50:22.925+0800|info|Server exiting|{"uid": 3688}
+{"level":"info","time":"2021-01-08T15:50:31.404+0800","linenum":"F:/go-workspace/gin-test/main.go:22","msg":"test zap"}
+{"level":"info","time":"2021-01-08T15:50:38.445+0800","linenum":"F:/go-workspace/gin-test/middlewares/GinLogger.go:23","msg":"/api/member/list","status":200,"test":{"method":"GET","path":"/api/member/list","query":"","ip":"::1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.88 Safari/537.36","errors":"","cost":0.000996}}
+{"level":"info","time":"2021-01-08T16:31:15.420+0800","linenum":"F:/go-workspace/gin-test/main.go:44","msg":"Shutdown Server ..."}
+{"level":"info","time":"2021-01-08T16:31:15.450+0800","linenum":"F:/go-workspace/gin-test/main.go:51","msg":"Server exiting"}
+{"level":"info","time":"2021-01-08T16:31:33.053+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:22","msg":"jdx_test","uid":3688,"data":"null"}
+{"level":"info","time":"2021-01-08T16:33:25.039+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:22","msg":"jdx_test","uid":3688,"data":"null"}
+{"level":"info","time":"2021-01-08T16:36:21.899+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:22","msg":"jdx_test","uid":3688,"data":{"tt":"[{\"Val\":3699}]"}}
+{"level":"info","time":"2021-01-08T16:42:44.659+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:9","msg":"jdx_test","uid":3699,"uid":3688,"data":{}}
+{"level":"info","time":"2021-01-08T16:44:12.904+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:9","msg":"jdx_test","uid":3699,"data":{"uid":3688}}
+{"level":"info","time":"2021-01-08T16:45:03.307+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:9","msg":"jdx_test","uid":3699,"uuu":111,"data":{"uid":3688}}
+{"level":"info","time":"2021-01-08T16:53:59.959+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:12","msg":"jdx_test","data":{"uid":3688,"uid":3699,"uuu":111}}
+{"level":"info","time":"2021-01-08T16:54:51.861+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:10","msg":"jdx_test","data":{"uid":3688,"uid":3699,"uuu":111}}
+{"level":"info","time":"2021-01-08T16:55:54.086+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:13","msg":"jdx_test","uid":3688,"data":{"uid":3699,"uuu":111}}
+{"level":"info","time":"2021-01-08T16:56:37.075+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:13","msg":"jdx_test","uid":3688,"data":{}}
+{"level":"info","time":"2021-01-08T17:00:35.435+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:9","msg":"jdx_test"}
+{"level":"info","time":"2021-01-08T17:05:32.923+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:8","msg":"jdx_test","uid":3688,"data":{}}
+{"level":"info","time":"2021-01-08T18:03:13.962+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{}}
+{"level":"info","time":"2021-01-08T18:03:13.975+0800","linenum":"F:/go-workspace/gin-test/main.go:27","msg":"test zap"}
+{"level":"info","time":"2021-01-08T18:03:30.220+0800","linenum":"F:/go-workspace/gin-test/main.go:49","msg":"Shutdown Server ..."}
+{"level":"info","time":"2021-01-08T18:03:30.220+0800","linenum":"F:/go-workspace/gin-test/main.go:56","msg":"Server exiting"}
+{"level":"info","time":"2021-01-08T18:03:33.698+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{}}
+{"level":"info","time":"2021-01-08T18:05:04.044+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{"uu":111,"kkk":"123"}}
+2021-01-08T18:05:36.401+0800|info|F:/go-workspace/gin-test/Logger/LogServer.go:21|jdx_test|{"uid": 3688, "trace_id": "", "user_agent": "", "url": "", "params": "", "data": {"uu": 111, "kkk": "123"}}
+{"level":"info","time":"2021-01-08T18:06:17.689+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{"uu":111,"kkk":"123"}}
+{"level":"info","time":"2021-01-08T18:08:13.636+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","F:/go-workspace/gin-test/Logger/LogServer.go",21,"msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{"uu":111,"kkk":"123"}}
+{"level":"info","time":"2021-01-08T18:10:29.753+0800","linenum":"F:/go-workspace/gin-test/Logger/LogServer.go:21","msg":"jdx_test","uid":3688,"trace_id":"","user_agent":"","url":"","params":"","data":{"uu":111,"kkk":"123"}}

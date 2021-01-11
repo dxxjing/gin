@@ -2,8 +2,10 @@ package main
 
 import (
 	"context"
+	"fmt"
+	"gin-test/Logger"
 	"gin-test/routers"
-	"log"
+	"go.uber.org/zap"
 	"net/http"
 	"os"
 	"os/signal"
@@ -11,8 +13,18 @@ import (
 )
 
 func main() {
+	//初始化zap日志
+	Logger.InitZapLogger()
+	//将缓存中的日志刷入文件中 程序退出前应调用
+	defer zap.L().Sync()
+
 	r := routers.InitRouter()
 
+	Logger.Info("jdx_test", Logger.CommFields{
+		Uid: 3688,
+	}, zap.Int("uu", 111), zap.String("kkk", "123"))
+	return
+	zap.L().Info("test zap")
 	//r.Run() //默认监听 0.0.0.0：8080
 	//测试 http://localhost:8080/ping
 
@@ -25,20 +37,22 @@ func main() {
 	}
 	go func() {
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-			log.Fatalf("listen %s \n", err)
+			zap.L().Error("start http srv err:")
 		}
+		fmt.Println("http srver start...")
+		zap.L().Info("http server started")
 	}()
 	//捕获信号 停止服务
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt)
 	<-quit
-	log.Println("Shutdown Server ...")
+	zap.L().Info("Shutdown Server ...")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	if err := srv.Shutdown(ctx); err != nil {
-		log.Fatal("Server Shutdown:", err)
+		zap.L().Error("Server Shutdown err")
 	}
-	log.Println("Server exiting")
+	zap.L().Info("Server exiting")
 
 }

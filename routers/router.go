@@ -10,6 +10,8 @@ import (
 //路由
 func InitRouter () *gin.Engine {
 	r := gin.Default()
+	//启用 zap log中间件
+	r.Use(middlewares.GinLogger())
 	//测试
 	test := new(controllers.TestController)
 	r.GET("ping", test.Ping)
