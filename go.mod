@@ -7,13 +7,16 @@ module gin-test
 go 1.12
 
 require (
+	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
 	github.com/creack/pty v1.1.11 // indirect
 	github.com/gin-gonic/gin v1.6.3
+	github.com/go-ole/go-ole v1.2.4 // indirect
 	github.com/golang/protobuf v1.4.3
 	github.com/google/renameio v1.0.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/rogpeppe/go-internal v1.6.2 // indirect
+	github.com/shirou/gopsutil v3.20.12+incompatible // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
 	github.com/stretchr/testify v1.6.1 // indirect
 	github.com/yuin/goldmark v1.3.1 // indirect

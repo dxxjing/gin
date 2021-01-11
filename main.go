@@ -20,9 +20,10 @@ func main() {
 
 	r := routers.InitRouter()
 
-	Logger.Info("jdx_test", Logger.CommFields{
+	Logger.Debug("jdx_test", Logger.CommFields{
 		Uid: 3688,
 	}, zap.Int("uu", 111), zap.String("kkk", "123"))
+	//Logger.InfoMsg("test hhhh")
 	return
 	zap.L().Info("test zap")
 	//r.Run() //默认监听 0.0.0.0：8080

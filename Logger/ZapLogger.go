@@ -1,14 +1,20 @@
 package Logger
 
 import (
+	"fmt"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/natefinch/lumberjack.v2"
+	"os"
+	"path"
+	"runtime"
 )
 
 func InitZapLogger() {
 	hook := getLoggerWriter()
-
+	p, _ := os.Getwd()
+	fmt.Println("test-dir")
+	fmt.Println(path.Dir(p))
 	encoderConfig := encoderConfig()
 	//设置日志级别
 	atomicLevel := zap.NewAtomicLevel()
@@ -33,7 +39,7 @@ func InitZapLogger() {
 
 	// 构造日志
 	logger := zap.New(core, caller, development)
-	//替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可
+	//替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可  进程内的全局变量 每个进程维护一份,互不干扰
 	zap.ReplaceGlobals(logger)
 }
 
@@ -51,7 +57,8 @@ func encoderConfig() zapcore.EncoderConfig {
 		EncodeDuration: zapcore.SecondsDurationEncoder, //
 		//EncodeCaller:   zapcore.FullCallerEncoder,      // 全路径编码器
 		EncodeCaller: func(caller zapcore.EntryCaller, encoder zapcore.PrimitiveArrayEncoder) {
-			encoder.AppendString(caller.String())
+			//自定义
+			encoder.AppendString(zapcore.NewEntryCaller(runtime.Caller(6)).String())
 		},// 全路径编码器
 		EncodeName:     zapcore.FullNameEncoder,
 		ConsoleSeparator: "|",
