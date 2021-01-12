@@ -39,7 +39,9 @@ func InitZapLogger() {
 
 	// 构造日志
 	logger := zap.New(core, caller, development)
-	//替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可  进程内的全局变量 每个进程维护一份,互不干扰
+	//替换zap包中全局的logger实例，后续在其他包中只需使用zap.L()调用即可
+	//多个进程间 互不影响  印证了 进程间共享全局变量(仅限于有血缘关系的进程间)，但全局变量的值在进程间是不共享的，
+	//因为生成子进程 会将父进程的代码拷贝一份（全局变量在每个子进程中都是初始值）
 	zap.ReplaceGlobals(logger)
 }
 
