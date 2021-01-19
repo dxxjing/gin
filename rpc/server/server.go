@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/rpc"
 )
-//参数结构体 因为 rpc.client.Call(serviceMethod string, args interface{}, reply interface{})
+//参数结构体 因为 rpc.esClient.Call(serviceMethod string, args interface{}, reply interface{})
 //只接收三个参数 依次为 远程方法名  参数列表  返回值
 type Params struct {
 	Width, Height int
