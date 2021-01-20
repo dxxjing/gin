@@ -4,6 +4,7 @@ import (
 	"context"
 	"fmt"
 	"gin-test/Logger"
+	"gin-test/crontab"
 	"gin-test/routers"
 	"go.uber.org/zap"
 	"net/http"
@@ -18,13 +19,16 @@ func main() {
 	//将缓存中的日志刷入文件中 程序退出前应调用
 	defer zap.L().Sync()
 
+	//定时任务
+	go crontab.Crontest()
+
+
+
 	r := routers.InitRouter()
 
 	Logger.Debug("jdx_test", Logger.CommFields{
 		Uid: 3688,
 	}, zap.Int("uu", 111), zap.String("kkk", "123"))
-	//Logger.InfoMsg("test hhhh")
-	//zap.L().Info("test zap")
 	//r.Run() //默认监听 0.0.0.0：8080
 	//测试 http://localhost:8080/ping
 
@@ -35,6 +39,7 @@ func main() {
 		WriteTimeout: 30 * time.Second,
 		MaxHeaderBytes: 1 << 20,
 	}
+
 	go func() {
 		fmt.Println("http srver start...")
 		zap.L().Info("http server started")
@@ -46,6 +51,7 @@ func main() {
 	quit := make(chan os.Signal)
 	signal.Notify(quit, os.Interrupt)
 	<-quit
+	fmt.Println("get signal shutdown server")
 	zap.L().Info("Shutdown Server ...")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
@@ -54,5 +60,6 @@ func main() {
 		zap.L().Error("Server Shutdown err")
 	}
 	zap.L().Info("Server exiting")
+
 
 }
