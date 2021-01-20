@@ -16,6 +16,7 @@ require (
 	github.com/google/renameio v1.0.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
+	github.com/robfig/cron/v3 v3.0.1
 	github.com/rogpeppe/go-internal v1.6.2 // indirect
 	github.com/shirou/gopsutil v3.20.12+incompatible // indirect
 	github.com/stretchr/objx v0.3.0 // indirect
