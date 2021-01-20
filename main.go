@@ -24,8 +24,7 @@ func main() {
 		Uid: 3688,
 	}, zap.Int("uu", 111), zap.String("kkk", "123"))
 	//Logger.InfoMsg("test hhhh")
-	return
-	zap.L().Info("test zap")
+	//zap.L().Info("test zap")
 	//r.Run() //默认监听 0.0.0.0：8080
 	//测试 http://localhost:8080/ping
 
@@ -37,11 +36,11 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 	go func() {
+		fmt.Println("http srver start...")
+		zap.L().Info("http server started")
 		if err := srv.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			zap.L().Error("start http srv err:")
 		}
-		fmt.Println("http srver start...")
-		zap.L().Info("http server started")
 	}()
 	//捕获信号 停止服务
 	quit := make(chan os.Signal)
