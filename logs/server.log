@@ -171,3 +171,7 @@
 {"level":"info","time":"2021-01-19T14:58:59.651+0800","linenum":"C:/Go/src/runtime/asm_amd64.s:1337","msg":"http server started"}
 {"level":"info","time":"2021-01-19T14:59:05.761+0800","linenum":"C:/Go/src/runtime/proc.go:200","msg":"Shutdown Server ..."}
 {"level":"info","time":"2021-01-19T14:59:05.761+0800","linenum":"C:/Go/src/runtime/proc.go:200","msg":"Server exiting"}
+{"level":"info","time":"2021-01-20T11:44:49.635+0800","linenum":"C:/Go/src/runtime/asm_amd64.s:1337","msg":"http server started"}
+{"level":"info","time":"2021-01-20T11:45:33.121+0800","linenum":"C:/Go/src/runtime/proc.go:200","msg":"Shutdown Server ..."}
+{"level":"info","time":"2021-01-20T11:45:33.121+0800","linenum":"C:/Go/src/runtime/proc.go:200","msg":"Server exiting"}
+{"level":"info","time":"2021-01-20T11:50:55.549+0800","linenum":"C:/Go/src/runtime/proc.go:200","msg":"http server started"}
