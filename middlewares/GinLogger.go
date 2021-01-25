@@ -1,7 +1,6 @@
 package middlewares
 
 import (
-	"fmt"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
 	"time"
@@ -12,7 +11,6 @@ func GinLogger() gin.HandlerFunc {
 		start := time.Now()
 		path := c.Request.URL.Path
 		query := c.Request.URL.RawQuery
-		fmt.Println("gin logger start....")
 
 		zap.L().WithOptions(zap.Fields(zap.Int("uid", 3688)))
 		//虽然能实现动态增加 固定字段 但是要每次请求都要new

@@ -23,6 +23,7 @@ func InitRouter () *gin.Engine {
 		member.GET("/list", memberController.List)
 		member.GET("/add", memberController.Add)
 	}
+	r.GET("/sleep", memberController.Sleep)
 
 	r.NoRoute(func(c *gin.Context) {
 		c.JSON(http.StatusNotFound, gin.H{

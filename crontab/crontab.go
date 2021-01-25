@@ -20,7 +20,7 @@ func Crontest() {
 
 
 	//每分钟执行一次
-	id, err := c.AddFunc("0 */1 * * * *", func() {
+	id, err := c.AddFunc("*/5 * * * * *", func() {
 		fmt.Println("new crontab:", time.Now().Format("2006-01-02 15:04:05"))
 	})
 	if err != nil {
