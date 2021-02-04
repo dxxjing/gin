@@ -1,18 +1,15 @@
 package main
 
-import (
-	"fmt"
-	"time"
-)
+import "fmt"
 
 func main() {
-	ch := make(chan bool)
+	//切片传指针
+	s := []int{1,2,3}
+	fmt.Println(len(s), cap(s), s)
+	Add(&s)
+	fmt.Println(len(s),cap(s), s)
+}
 
-	go func(ch chan bool) {
-		time.Sleep(5*time.Second)
-		fmt.Println("gourtine done")
-		ch <- true
-	}(ch)
-	 <- ch
-	 fmt.Println("done")
+func Add(s *[]int) {
+	*s = append(*s, 4)
 }
